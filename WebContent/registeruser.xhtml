@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"></link>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</h:head>
+<h:body class="container">
+<h1 align="center">Sign-Up</h1>	 		
+	   <h:form class="form-signin">
+	             <h:outputLabel for="uid" class="label"> Username</h:outputLabel>
+                <h:inputText id="uid" value="#{registerUserBean.uid}" class="form-control" required="true"
+                requiredMessage="Username is required"/>
+                <h:message id = "m1" for="uid" style="color:red"/> <p></p>          
+                <h:outputLabel for="Password" class="label">Password</h:outputLabel>
+                <h:inputText id="Password" value="#{registerUserBean.password}" class="form-control" required="true"
+                requiredMessage="password is required"/>
+                <h:message id= "m2" for="Password" style="color:red"/><p></p>  
+                <h:outputLabel for="firstname" class="label"> First Name</h:outputLabel>
+                <h:inputText id="firstname" value="#{registerUserBean.firstname}" class="form-control" required="true"
+                requiredMessage="First name is required"/>
+                <h:message id= "m3" for="firstname" style="color:red"/><p></p>
+                <h:outputLabel for="lastname" class="label"> Last Name</h:outputLabel>
+                <h:inputText id="lastname" value="#{registerUserBean.lastname}" class="form-control" required="true"
+                requiredMessage="Last name is required"/>
+                <h:message id= "m4" for="lastname" style="color:red"/><p></p>
+                <h:outputLabel for="email" class="label"> Email ID</h:outputLabel>
+                <h:inputText id="email" value="#{registerUserBean.email}" class="form-control" required="true"
+                requiredMessage="email is required"/>
+                 <h:message id= "m5" for="email" style="color:red"/><p></p>
+                <h:commandButton class="btn btn-primary" value="Submit" action="#{registerUserBean.createData}"/>
+               
+	   </h:form>
+</h:body>
+</html>
